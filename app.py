@@ -1,6 +1,6 @@
 import pandas as pd
 import plotly.express as px
-from dash import Dash, html, dcc
+from dash import Dash, html, dcc, callback, Input, Output
 
 #Read csv file
 df = pd.read_csv(r'C:/Portfolio Projects/data-analytics/video-game-sales/data/vgsales_clean.csv')
@@ -37,6 +37,14 @@ app = Dash(__name__)
 
 app.layout = html.Div([
     html.H1("Video Game Sales Dashboard"),
+    dcc.RangeSlider(
+        id='year-slider',
+        min=1980,
+        max=2016,
+        step=1,
+        value=[1980, 2016],
+        marks={i: str(i) for i in range(1980, 2017, 5)}
+    ),
     dcc.Graph(figure=genre_fig),
     html.P("Action and Sports games saw the most growth from 2000 to 2009. Sports declined sharply after 2009 due to limited competition and repetitive annual releases, while Action remained more stable due to its broader range of developers."),
     dcc.Graph(figure=pub_fig),
@@ -44,6 +52,8 @@ app.layout = html.Div([
     dcc.Graph(figure=region_fig),
     html.P("North America has been the largest and fastest growing gaming market since the 90s, followed by Europe. Japan and other regions remained relatively flat with no significant growth over time.")
 ])
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
