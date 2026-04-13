@@ -3,7 +3,7 @@ import plotly.express as px
 from dash import Dash, html, dcc, callback, Input, Output
 
 #Read csv file
-df = pd.read_csv(r'C:/Portfolio Projects/data-analytics/video-game-sales/data/vgsales_clean.csv')
+df = pd.read_csv('data/vgsales_clean.csv')
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Genre Popularity ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 genre_year = df.groupby(['Year', 'Genre']) ['Global_Sales'].sum().reset_index()
