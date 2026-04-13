@@ -1,5 +1,7 @@
 # Video Game Sales Dashboard
 
+[Live  Demo] (https://video-game-sales-dashboard.onrender.com/)
+
 ## Overview
 A data analytics dashboard built with Python and Dash that explores video game sales trends from 1980 to 2016.
 
