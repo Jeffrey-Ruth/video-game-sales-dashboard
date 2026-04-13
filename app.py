@@ -46,11 +46,11 @@ app.layout = html.Div([
         marks={i: str(i) for i in range(1980, 2017, 5)}
     ),
     dcc.Graph(id='genre-graph', figure=genre_fig),
-    html.P("Action and Sports games saw the most growth from 2000 to 2009. Sports declined sharply after 2009 due to limited competition and repetitive annual releases, while Action remained more stable due to its broader range of developers."),
+    html.P("Action and Sports games saw the most growth from 2000 to 2009. Sports declined sharply after 2009 due to limited competition and repetitive annual releases, while Action remained more stable due to its broader range of developers.", style={'padding': '0px 200px', 'marginTop': '0px'}),
     dcc.Graph(id='pub-graph', figure=pub_fig),
-    html.P("Nintendo saw massive growth around 2006 driven by the launch of the Wii, one of the best selling consoles of all time. EA, Nintendo, Activision, and Ubisoft consistently dominated global sales throughout the dataset.""Nintendo saw massive growth around 2006 driven by the launch of the Wii, one of the best selling consoles of all time. EA, Nintendo, Activision, and Ubisoft consistently dominated global sales throughout the dataset."),
+    html.P("Nintendo saw massive growth around 2006 driven by the launch of the Wii, one of the best selling consoles of all time. EA, Nintendo, Activision, and Ubisoft consistently dominated global sales throughout the dataset.""Nintendo saw massive growth around 2006 driven by the launch of the Wii, one of the best selling consoles of all time. EA, Nintendo, Activision, and Ubisoft consistently dominated global sales throughout the dataset.", style={'padding': '0px 200px', 'marginTop': '0px'}),
     dcc.Graph(id='region-graph', figure=region_fig),
-    html.P("North America has been the largest and fastest growing gaming market since the 90s, followed by Europe. Japan and other regions remained relatively flat with no significant growth over time.")
+    html.P("North America has been the largest and fastest growing gaming market since the 90s, followed by Europe. Japan and other regions remained relatively flat with no significant growth over time.", style={'padding': '0px 200px', 'marginTop': '0px'})
 ])
 
 @callback(
